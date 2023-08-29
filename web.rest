@@ -1,0 +1,36 @@
+### List Instructors
+GET http://127.0.0.1:8000/api/instructors/
+
+
+### Create Instructors
+POST http://127.0.0.1:8000/api/instructors/
+Content-Type: application/json
+
+{
+    "name": "Narender",
+    "gender": "Male",
+    "date_of_birth": "1998-11-17",
+    "department": "CSE",
+    "email": "narender@gmail.com",
+    "contact_number": "9876543210"
+}
+
+
+
+### List Instructors
+GET http://127.0.0.1:8000/api/instructors/2
+
+
+
+### List Instructors
+PATCH http://127.0.0.1:8000/api/instructors/2/
+Content-Type: application/json
+
+{
+    "department": "Civil"
+}
+
+
+
+### List Instructors
+DELETE http://127.0.0.1:8000/api/instructors/2/
