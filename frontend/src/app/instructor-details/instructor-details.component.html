@@ -1,0 +1,17 @@
+<p>
+  <a [routerLink]="['/instructors/update', instructor.id]">Update Instructor</a>
+</p>
+
+<p>
+  <button (click)="deleteInstructor()">Delete Instructor</button>
+</p>
+
+<h2>Instructor Details</h2>
+<div *ngIf="instructor">
+  <p>Name: {{ instructor.name }}</p>
+  <p>Gender: {{ instructor.gender }}</p>
+  <p>Date of Birth: {{ instructor.date_of_birth }}</p>
+  <p>Department: {{ instructor.department }}</p>
+  <p>Email: {{ instructor.email }}</p>
+  <p>Contact Number: {{ instructor.contact_number }}</p>
+</div>

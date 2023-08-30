@@ -1,0 +1,12 @@
+<p>
+  <a routerLink="/instructors/create">Create New Instructor</a>
+</p>
+
+
+<ul>
+  <li *ngFor="let instructor of instructors">
+    <a [routerLink]="['/instructors', instructor.id]">
+      {{ instructor.name }} ({{ instructor.email }})
+    </a>
+  </li>
+</ul>
