@@ -1,0 +1,27 @@
+<h2>Create New Course</h2>
+<form #courseForm="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="course_code">Course Code:</label>
+    <input type="text" id="course_code" name="course_code" [(ngModel)]="newCourse.course_code" required>
+  </div>
+  <div>
+    <label for="course_name">Course Name:</label>
+    <input type="text" id="course_name" name="course_name" [(ngModel)]="newCourse.course_name" required>
+  </div>
+  <div>
+    <label for="department">Department:</label>
+    <select id="department" [(ngModel)]="newCourse.department" name="department" required>
+      <option *ngFor="let dept of departments" [value]="dept.id">{{ dept.name }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="credits">Credits:</label>
+    <input type="number" id="credits" name="credits" [(ngModel)]="newCourse.credits" required>
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" [(ngModel)]="newCourse.description" rows="4" required></textarea>
+  </div>
+  <!-- Add other course fields as needed -->
+  <button type="submit" [disabled]="courseForm.invalid">Create Course</button>
+</form>

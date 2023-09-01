@@ -17,12 +17,12 @@ Content-Type: application/json
 
 
 
-### List Instructors
+### List Single Instructors
 GET http://127.0.0.1:8000/api/instructors/2
 
 
 
-### List Instructors
+### Update Instructors
 PATCH http://127.0.0.1:8000/api/instructors/2/
 Content-Type: application/json
 
@@ -32,5 +32,45 @@ Content-Type: application/json
 
 
 
-### List Instructors
+### Delete Instructors
 DELETE http://127.0.0.1:8000/api/instructors/2/
+
+
+
+
+
+### List Courses
+GET http://127.0.0.1:8000/api/courses/
+
+
+### Create Courses
+POST http://127.0.0.1:8000/api/courses/
+Content-Type: application/json
+
+{
+    "course_code": "9743",
+    "course_name": "Full Stack Web Development",
+    "department": "CSE",
+    "credits": 100,
+    "description": "Learn Complete Full Stack Web Development"
+}
+
+
+
+### List Single Courses
+GET http://127.0.0.1:8000/api/courses/2
+
+
+
+### Update Courses
+PATCH http://127.0.0.1:8000/api/courses/2/
+Content-Type: application/json
+
+{
+    "department": "Civil"
+}
+
+
+
+### Delete Courses
+DELETE http://127.0.0.1:8000/api/courses/2/

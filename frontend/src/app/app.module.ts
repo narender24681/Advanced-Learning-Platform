@@ -9,6 +9,10 @@ import { InstructorListingComponent } from './instructor-listing/instructor-list
 import { InstructorDetailsComponent } from './instructor-details/instructor-details.component';
 import { InstructorCreationComponent } from './instructor-creation/instructor-creation.component';
 import { InstructorUpdateComponent } from './instructor-update/instructor-update.component';
+import { CourseListComponent } from './course-list/course-list.component';
+import { CourseDetailsComponent } from './course-details/course-details.component';
+import { CourseCreationComponent } from './course-creation/course-creation.component';
+import { CourseUpdateComponent } from './course-update/course-update.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { InstructorUpdateComponent } from './instructor-update/instructor-update
     InstructorListingComponent,
     InstructorDetailsComponent,
     InstructorCreationComponent,
-    InstructorUpdateComponent
+    InstructorUpdateComponent,
+    CourseListComponent,
+    CourseDetailsComponent,
+    CourseCreationComponent,
+    CourseUpdateComponent
   ],
   imports: [
     BrowserModule,

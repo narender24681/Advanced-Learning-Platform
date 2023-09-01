@@ -1,0 +1,27 @@
+<h2>Update Course</h2>
+<form #courseUpdateForm="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="course_code">Course Code:</label>
+    <input type="text" id="course_code" name="course_code" [(ngModel)]="updatedCourse.course_code" required>
+  </div>
+  <div>
+    <label for="course_name">Course Name:</label>
+    <input type="text" id="course_name" name="course_name" [(ngModel)]="updatedCourse.course_name" required>
+  </div>
+  <div>
+    <label for="department">Department:</label>
+    <select id="department" [(ngModel)]="updatedCourse.department" name="department" required>
+      <option *ngFor="let dept of departments" [value]="dept.id">{{ dept.name }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="credits">Credits:</label>
+    <input type="number" id="credits" name="credits" [(ngModel)]="updatedCourse.credits" required>
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" [(ngModel)]="updatedCourse.description" rows="4" required></textarea>
+  </div>
+  <!-- Add other course fields as needed -->
+  <button type="submit" [disabled]="courseUpdateForm.invalid">Update Course</button>
+</form>

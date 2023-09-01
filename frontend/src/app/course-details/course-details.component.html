@@ -1,0 +1,20 @@
+<a [routerLink]="['/courses/update', course.id]">Update Course</a>
+
+<button (click)="onDelete()">Delete</button>
+
+<h2>Course Details</h2>
+<div>
+  <strong>Course Code:</strong> {{ course.course_code }}
+</div>
+<div>
+  <strong>Course Name:</strong> {{ course.course_name }}
+</div>
+<div>
+  <strong>Department:</strong> {{ course.department }}
+</div>
+<div>
+  <strong>Credits:</strong> {{ course.credits }}
+</div>
+<div>
+  <strong>Description:</strong> {{ course.description }}
+</div>
