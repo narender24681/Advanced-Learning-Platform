@@ -1,0 +1,46 @@
+<h2>Create New Student</h2>
+<form (submit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="newStudent.name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="studentId">Student ID:</label>
+    <input type="text" id="studentId" name="studentId" [(ngModel)]="newStudent.student_id" required>
+  </div>
+
+  <div class="form-group">
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" [(ngModel)]="newStudent.gender" required>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="dateOfBirth">Date of Birth:</label>
+    <input type="date" id="dateOfBirth" name="dateOfBirth" [(ngModel)]="newStudent.date_of_birth">
+  </div>
+
+  <div class="form-group">
+    <label for="major">Major:</label>
+    <input type="text" id="major" name="major" [(ngModel)]="newStudent.major" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="newStudent.email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="contactNumber">Contact Number:</label>
+    <input type="text" id="contactNumber" name="contactNumber" [(ngModel)]="newStudent.contact_number" required>
+  </div>
+
+  <!-- Add more form fields for other student attributes as needed -->
+
+  <div class="form-group">
+    <button type="submit">Create Student</button>
+  </div>
+</form>

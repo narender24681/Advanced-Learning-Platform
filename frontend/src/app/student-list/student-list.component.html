@@ -1,0 +1,13 @@
+<a routerLink="/students/create">Create Student</a>
+
+<h2>Student Listing</h2>
+
+<div *ngFor="let student of students">
+  <div>
+    <strong>{{ student.name }}</strong>
+    <p>{{ student.email }}</p>
+    <!-- Add more student information as needed -->
+    <p><a [routerLink]="['/students', student.id]">View Details</a></p>
+</div>
+<br>
+</div>

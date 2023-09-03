@@ -1,0 +1,13 @@
+<a routerLink="/assignments/create">Create Assignment</a>
+
+
+<h2>Assignment Listing</h2>
+<div *ngFor="let assignment of assignments">
+  <div>
+    <strong>{{ assignment.title }}</strong>
+    <p>{{ assignment.course.course_name }}</p>
+    <!-- Add more assignment information as needed -->
+    <p><a [routerLink]="['/assignments', assignment.id]">View Details</a></p>
+  </div>
+  <br>
+</div>

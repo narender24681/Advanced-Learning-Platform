@@ -1,0 +1,43 @@
+<a [routerLink]="['/students/update', student.id]">Update Student</a>
+
+<button mat-button color="warn" (click)="onDelete()">Delete Student</button>
+
+<div class="container">
+  <h2>Student Details</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <th>Name:</th>
+            <td>{{ student.name }}</td>
+          </tr>
+          <tr>
+            <th>Student ID:</th>
+            <td>{{ student.student_id }}</td>
+          </tr>
+          <tr>
+            <th>Gender:</th>
+            <td>{{ student.gender }}</td>
+          </tr>
+          <tr>
+            <th>Date of Birth:</th>
+            <td>{{ student.date_of_birth | date }}</td>
+          </tr>
+          <tr>
+            <th>Major:</th>
+            <td>{{ student.major }}</td>
+          </tr>
+          <tr>
+            <th>Email:</th>
+            <td>{{ student.email }}</td>
+          </tr>
+          <tr>
+            <th>Contact Number:</th>
+            <td>{{ student.contact_number }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

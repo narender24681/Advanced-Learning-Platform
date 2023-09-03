@@ -1,0 +1,16 @@
+<h2>Create New Enrollment</h2>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="student">Student:</label>
+    <select id="student" name="student" [(ngModel)]="newEnrollment.student">
+      <option *ngFor="let student of students" [value]="student.id">{{ student.name }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="course">Course:</label>
+    <select id="course" name="course" [(ngModel)]="newEnrollment.course">
+        <option *ngFor="let course of courses" [value]="course.id">{{ course.course_name }}</option>
+      </select>
+  </div>
+  <button type="submit">Create Enrollment</button>
+</form>

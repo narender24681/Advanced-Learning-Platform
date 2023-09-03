@@ -1,0 +1,17 @@
+<a [routerLink]="['/assignments/update', assignment.id]">Update Assignment</a>
+
+<button mat-button color="warn" (click)="onDelete()">Delete Assignment</button>
+
+<h2>Assignment Details</h2>
+<div>
+  <strong>Title:</strong> {{ assignment.title }}
+</div>
+<div>
+  <strong>Description:</strong> {{ assignment.description }}
+</div>
+<div>
+  <strong>Due Date:</strong> {{ assignment.due_date | date }}
+</div>
+<div>
+  <strong>Course:</strong> {{ assignment.course?.course_name }}
+</div>

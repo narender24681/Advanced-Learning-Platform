@@ -1,0 +1,22 @@
+<h2>Create New Assignment</h2>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" [(ngModel)]="newAssignment.title" required>
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" [(ngModel)]="newAssignment.description" required>
+  </div>
+  <div>
+    <label for="due_date">Due Date:</label>
+    <input type="date" id="due_date" name="due_date" [(ngModel)]="newAssignment.due_date">
+  </div>
+  <div>
+    <label for="course">Course:</label>
+    <select id="course" name="course" [(ngModel)]="newAssignment.course">
+        <option *ngFor="let course of courses" [value]="course.id">{{ course.course_name }}</option>
+    </select>
+  </div>
+  <button type="submit">Create Assignment</button>
+</form>

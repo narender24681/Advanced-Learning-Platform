@@ -1,0 +1,22 @@
+<h2>Submission List</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Submission Date</th>
+      <th>Status</th>
+      <th>Remarks</th>
+      <th>Assignment</th>
+      <th>Student</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let submission of submissions">
+      <td>{{ submission.submission_date }}</td>
+      <td>{{ submission.status }}</td>
+      <td>{{ submission.remarks }}</td>
+      <td>{{ submission.assignment.title }}</td>
+      <td>{{ submission.student.name }}</td>
+    </tr>
+  </tbody>
+</table>

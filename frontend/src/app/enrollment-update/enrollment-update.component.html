@@ -1,0 +1,20 @@
+<h2>Update Enrollment</h2>
+<form (ngSubmit)="onSubmit()">
+  <!-- Add fields for updating enrollment properties -->
+  <div>
+    <label for="student">Student:</label>
+    <select id="student" name="student" [(ngModel)]="updatedEnrollment.student" required>
+      <!-- Populate the options with available students -->
+      <option *ngFor="let student of students" [ngValue]="student.id">{{ student.name }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="course">Course:</label>
+    <select id="course" name="course" [(ngModel)]="updatedEnrollment.course" required>
+      <!-- Populate the options with available courses -->
+      <option *ngFor="let course of courses" [ngValue]="course.id">{{ course.course_name }}</option>
+    </select>
+  </div>
+  <!-- Add other enrollment fields here -->
+  <button type="submit">Update Enrollment</button>
+</form>

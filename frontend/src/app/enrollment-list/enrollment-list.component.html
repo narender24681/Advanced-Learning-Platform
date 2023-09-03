@@ -1,0 +1,13 @@
+<a routerLink="/enrollments/create">Create Enrollment</a>
+
+
+<h2>Enrollment Listing</h2>
+<div *ngFor="let enrollment of enrollments">
+  <div>
+    <strong>{{ enrollment.student.name }}</strong>
+    <p>{{ enrollment.course.course_name }}</p>
+    <!-- Add more enrollment information as needed -->
+    <p><a [routerLink]="['/enrollments', enrollment.id]">View Details</a></p>
+  </div>
+  <br>
+</div>

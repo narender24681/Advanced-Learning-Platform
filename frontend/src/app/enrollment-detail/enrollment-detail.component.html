@@ -1,0 +1,14 @@
+<a [routerLink]="['/enrollments/update', enrollment.id]">Update Enrollment</a>
+
+<button mat-button color="warn" (click)="onDelete()">Delete Enrollment</button>
+
+<h2>Enrollment Details</h2>
+<div>
+  <strong>Student:</strong> {{ enrollment.student?.name }}
+</div>
+<div>
+  <strong>Course:</strong> {{ enrollment.course?.course_name }}
+</div>
+<div>
+  <strong>Enrollment Date:</strong> {{ enrollment.enrollment_date | date }}
+</div>
