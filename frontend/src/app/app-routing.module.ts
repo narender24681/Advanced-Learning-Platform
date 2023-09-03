@@ -21,6 +21,13 @@ import { AssignmentCreationComponent } from './assignment-creation/assignment-cr
 import { EnrollmentUpdateComponent } from './enrollment-update/enrollment-update.component';
 import { AssignmentUpdateComponent } from './assignment-update/assignment-update.component';
 import { SubmissionListComponent } from './submission-list/submission-list.component';
+import { SubmissionDetailsComponent } from './submission-details/submission-details.component';
+import { SubmissionCreationComponent } from './submission-creation/submission-creation.component';
+import { SubmissionUpdateComponent } from './submission-update/submission-update.component';
+import { AnnouncementListComponent } from './announcement-list/announcement-list.component';
+import { AnnouncementDetailsComponent } from './announcement-details/announcement-details.component';
+import { AnnouncementCreationComponent } from './announcement-creation/announcement-creation.component';
+import { AnnouncementUpdateComponent } from './announcement-update/announcement-update.component';
 
 const routes: Routes = [
   { path: 'instructors', component: InstructorListingComponent },
@@ -44,6 +51,13 @@ const routes: Routes = [
   { path: 'assignments/update/:id', component: AssignmentUpdateComponent },
   { path: 'assignments/:id', component: AssignmentDetailComponent },
   { path: 'submissions', component: SubmissionListComponent },
+  { path: 'submissions/create', component: SubmissionCreationComponent },
+  { path: 'submissions/update/:id', component: SubmissionUpdateComponent },
+  { path: 'submissions/:id', component: SubmissionDetailsComponent },
+  { path: 'announcements', component: AnnouncementListComponent },
+  { path: 'announcements/create', component: AnnouncementCreationComponent },
+  { path: 'announcements/update/:id', component: AnnouncementUpdateComponent },
+  { path: 'announcements/:id', component: AnnouncementDetailsComponent },
 ];
 
 @NgModule({

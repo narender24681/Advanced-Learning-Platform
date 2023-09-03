@@ -1,0 +1,13 @@
+<a routerLink="/announcements/create">Create Announcement</a>
+
+
+<h2>Announcement Listing</h2>
+
+<ul>
+  <li *ngFor="let announcement of announcements">
+    <h3>{{ announcement.title }}</h3>
+    <p>{{ announcement.description }}</p>
+    <p>Publish Date: {{ announcement.publish_date }}</p>
+    <p><a [routerLink]="['/announcements', announcement.id]">View Details</a></p>
+  </li>
+</ul>

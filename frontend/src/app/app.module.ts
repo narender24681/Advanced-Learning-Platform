@@ -27,6 +27,13 @@ import { AssignmentCreationComponent } from './assignment-creation/assignment-cr
 import { EnrollmentUpdateComponent } from './enrollment-update/enrollment-update.component';
 import { AssignmentUpdateComponent } from './assignment-update/assignment-update.component';
 import { SubmissionListComponent } from './submission-list/submission-list.component';
+import { SubmissionDetailsComponent } from './submission-details/submission-details.component';
+import { SubmissionCreationComponent } from './submission-creation/submission-creation.component';
+import { SubmissionUpdateComponent } from './submission-update/submission-update.component';
+import { AnnouncementListComponent } from './announcement-list/announcement-list.component';
+import { AnnouncementDetailsComponent } from './announcement-details/announcement-details.component';
+import { AnnouncementCreationComponent } from './announcement-creation/announcement-creation.component';
+import { AnnouncementUpdateComponent } from './announcement-update/announcement-update.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +58,14 @@ import { SubmissionListComponent } from './submission-list/submission-list.compo
     AssignmentCreationComponent,
     EnrollmentUpdateComponent,
     AssignmentUpdateComponent,
-    SubmissionListComponent
+    SubmissionListComponent,
+    SubmissionDetailsComponent,
+    SubmissionCreationComponent,
+    SubmissionUpdateComponent,
+    AnnouncementListComponent,
+    AnnouncementDetailsComponent,
+    AnnouncementCreationComponent,
+    AnnouncementUpdateComponent
   ],
   imports: [
     BrowserModule,

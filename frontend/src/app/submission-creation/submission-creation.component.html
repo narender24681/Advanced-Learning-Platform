@@ -1,0 +1,28 @@
+<h2>Create New Submission</h2>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="submission_date">Submission Date:</label>
+    <input type="date" id="submission_date" name="submission_date" [(ngModel)]="newSubmission.submission_date" required>
+  </div>
+  <div>
+    <label for="status">Status:</label>
+    <input type="text" id="status" name="status" [(ngModel)]="newSubmission.status" required>
+  </div>
+  <div>
+    <label for="remarks">Remarks:</label>
+    <textarea id="remarks" name="remarks" [(ngModel)]="newSubmission.remarks"></textarea>
+  </div>
+  <div>
+    <label for="assignment">Assignment:</label>
+    <select id="assignment" name="assignment" [(ngModel)]="newSubmission.assignment" required>
+      <option *ngFor="let assignment of assignments" [value]="assignment.id">{{ assignment.title }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="student">Student:</label>
+    <select id="student" name="student" [(ngModel)]="newSubmission.student" required>
+      <option *ngFor="let student of students" [value]="student.id">{{ student.name }}</option>
+    </select>
+  </div>
+  <button type="submit">Create Submission</button>
+</form>

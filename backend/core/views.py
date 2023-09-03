@@ -1,7 +1,7 @@
 from rest_framework import generics
 from rest_framework.response import Response
-from .models import Instructor, Course, Department, Student, Enrollment, Assignment, Submission
-from .serializers import InstructorSerializer, CourseSerializer, DepartmentSerializer, StudentSerializer, EnrollmentSerializer, AssignmentSerializer, SubmissionSerializer
+from .models import Instructor, Course, Department, Student, Enrollment, Assignment, Submission, Announcement
+from .serializers import InstructorSerializer, CourseSerializer, DepartmentSerializer, StudentSerializer, EnrollmentSerializer, AssignmentSerializer, SubmissionSerializer, AnnouncementSerializer
 
 class InstructorListCreateView(generics.ListCreateAPIView):
     queryset = Instructor.objects.all()
@@ -81,3 +81,14 @@ class SubmissionListCreateView(generics.ListCreateAPIView):
 class SubmissionDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Submission.objects.all()
     serializer_class = SubmissionSerializer
+
+
+
+
+class AnnouncementList(generics.ListCreateAPIView):
+    queryset = Announcement.objects.all()
+    serializer_class = AnnouncementSerializer
+
+class AnnouncementDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Announcement.objects.all()
+    serializer_class = AnnouncementSerializer

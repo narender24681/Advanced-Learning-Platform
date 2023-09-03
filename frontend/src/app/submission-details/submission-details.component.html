@@ -1,0 +1,12 @@
+<a [routerLink]="['/submissions/update', submission.id]">Update Submission</a>
+
+<button (click)="onDelete()">Delete Submission</button>
+
+<div>
+  <h2>Submission Details</h2>
+  <p><strong>Submission Date:</strong> {{ submission.submission_date }}</p>
+  <p><strong>Status:</strong> {{ submission.status }}</p>
+  <p><strong>Remarks:</strong> {{ submission.remarks }}</p>
+  <p><strong>Assignment:</strong> {{ submission.assignment?.title }}</p>
+  <p><strong>Student:</strong> {{ submission.student?.name }}</p>
+</div>

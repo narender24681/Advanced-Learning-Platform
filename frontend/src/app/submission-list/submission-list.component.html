@@ -1,3 +1,6 @@
+<a routerLink="/submissions/create">Create Submission</a>
+
+
 <h2>Submission List</h2>
 
 <table class="table">
@@ -8,6 +11,7 @@
       <th>Remarks</th>
       <th>Assignment</th>
       <th>Student</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +21,8 @@
       <td>{{ submission.remarks }}</td>
       <td>{{ submission.assignment.title }}</td>
       <td>{{ submission.student.name }}</td>
+      <!-- Add more submission information as needed -->
+      <td><a [routerLink]="['/submissions', submission.id]">View Details</a></td>
     </tr>
   </tbody>
 </table>

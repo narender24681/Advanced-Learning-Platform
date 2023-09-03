@@ -1,0 +1,9 @@
+<a [routerLink]="['/announcements/update', announcement?.id]">Update Announcement</a>
+
+<button mat-button color="warn" (click)="onDelete()">Delete Announcement</button>
+
+<h2>{{ announcement?.title }}</h2>
+<p>Description: {{ announcement?.description }}</p>
+<p>Publish Date: {{ announcement?.publish_date }}</p>
+<p>Course: {{ announcement?.course?.course_name }}</p>
+<p>Department: {{ announcement?.department?.name }}</p>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SubmissionService } from '../submission.service';
+import { AssignmentService } from '../assignment.service';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-submission-list',
@@ -10,7 +12,9 @@ export class SubmissionListComponent implements OnInit {
   submissions: any[] = [];
 
   constructor(
-    private submissionService: SubmissionService
+    private submissionService: SubmissionService,
+    private assignmentService: AssignmentService,
+    private studentService: StudentService,
   ) {}
 
   ngOnInit(): void {
@@ -19,7 +23,17 @@ export class SubmissionListComponent implements OnInit {
       (data: any) => {
         this.submissions = data;
 
-        
+        this.submissions.forEach((submission) => {
+          // Fetch assignment details
+          this.assignmentService.getAssignmentById(submission.assignment).subscribe((assignment: any) => {
+            submission.assignment = assignment
+          })
+
+          // Fetch student details
+          this.studentService.getStudentById(submission.student).subscribe((student: any) => {
+            submission.student = student
+          })
+        })
       },
       (error) => {
         console.error('Error fetching submissions:', error);
